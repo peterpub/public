@@ -32,7 +32,7 @@ public class SqlHelper {
         }
         return _c;
     }
-
+ 
     public static CallableStatement callableStatement(String q){
         try {
             java.sql.CallableStatement s = c().prepareCall(q);
