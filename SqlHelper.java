@@ -5,7 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 
-//
+//...
 public class SqlHelper {
     static Connection _c = null;
     public static void main(String[]z){
@@ -32,7 +32,7 @@ public class SqlHelper {
         }
         return _c;
     }
- 
+
     public static CallableStatement callableStatement(String q){
         try {
             java.sql.CallableStatement s = c().prepareCall(q);
