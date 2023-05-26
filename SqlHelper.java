@@ -1,4 +1,4 @@
-package pub;
-
+package lib.public;
+//
 public class SqlHelper {
 }
