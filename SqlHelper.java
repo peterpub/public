@@ -16,8 +16,7 @@ public class SqlHelper {
             if (_c == null || _c.isClosed()) {
                 try {
                     Class.forName("org.postgresql.Driver");
-                    _c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "admin",
-                            "admin");
+                    _c = DriverManager.getConnection(PropertiesHelper.getProperty("url"), PropertiesHelper.getProperty("user"),PropertiesHelper.getProperty("password"));
                 } catch (Exception e) {
                     e.printStackTrace();
                     System.err.println(e.getClass().getName() + ": " + e.getMessage());
